@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title> Módulo 1 - O que são os softwares leitores de tela - Accessibility Training Web </title>
+    <meta charset="utf-8">
+    <style>
+        .oculta {
+            display: none;
+        }
+
+        .exibe {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1> Módulo 1 - O que são os softwares leitores de tela? </h1>
+        <h2> Como é o funcionamento desse tipo de programa em desktop? </h2>
+        <p> Softwares leitores de tela são ferramentas de tecnologia assistiva que convertem as informações exibidas de
+            forma visual para forma auditiva por meio de sintetizadores de voz. Os mais utilizados são para desktop o
+            Jaws (pago) e o NVDA (gratuito), e para mobile o VoiceOver no IOS e o TalcBack no Androide. </p>
+        <p> Como já dito, os leitores de tela transformam o que está exibido visualmente na tela em áudio. E no desktop
+            para selecionar a informação que queremos, não usamos o mouse, mas o teclado. Através dele, por meio de
+            atalhos, da tecla tab e principalmente das setas direcionais, nos movemos entre os elementos da tela, e à
+            medida que esses elementos vão sendo focados o sintetizador de vós vai os verbalizando. Nosso treinamento
+            está sendo realizado dentro de um navegador web, já que a maioria das aplicações que o banco utiliza rodam
+            por meio deles. O BB fornece aos seus funcionários o leitor de tela Jaws, porém por se tratar de um software
+            de licença paga com um custo auto, recomendamos o uso do NVDA por ser gratuito e possuir um comportamento
+            bem próximo ao do jaws. </p>
+        <div id="primeiroVideo">
+            <h3> Assista o vídeo abaixo e entenda melhor como são e o que fazem os softwares leitores de tela. </h3>
+            <video controls>
+                <source type="video/mp4" src="../videos/jawsNVDA.mp4">
+            </video>
+        </div>
+        <h2> Navegação com leitores de tela na web </h2>
+        <p> Basicamente, usamos os mesmos recursos de teclado (setas), (tab) e teclas de atalho, mas a navegação web tem
+            algumas peculiaridades que vamos abordar ao longo do treinamento. A forma de navegação mais utilizada é a
+            navegação com as setas direcionais para cima e para baixo. Essa forma é a mais completa pois além de passar
+            pelos elementos tabuláveis como links, botões, campos de edição que também são possíveis de serem focados
+            com a tecla (tab), ela também passa pelos itens não tabuláveis como textos e títulos de nível, que não são
+            possíveis de serem alcançados por meio da tecla (Tab). </p>
+        <h2> Como funciona a ordem de navegação com os leitores de tela? </h2>
+        <p> A ordem lida pelos leitores de tela é da esquerda para a direita e de cima para baixo. Temos que ter em
+            mente que os leitores de tela não leem literalmente o que está sendo exibido na tela, mas sim o código que
+            está por traz. Sendo assim, o código e o design têm que caminhar juntos para que a sequência do que é
+            verbalizado pelo leitor de tela seja a mesma que está sendo visualmente mostrada. Essa sequência é chamada
+            de ordem de navegação. </p>
+        <div id="segundoVideo">
+            <h3> Assista o vídeo a seguir e compreenda ainda melhor sobre leitores de tela. </h3>
+            <video controls>
+                <source type="video/mp4" src="../videos/leitorParaComputador.mp4">
+            </video>
+        </div>
+        <h2> Exemplo na prática</h2>
+        <p> Abaixo você encontrará um botão de nome “Exibir teclado Numérico”. Ao pressionar (Enter) ou (Barra de
+            espaço) sobre ele, um teclado se abrirá com o primeiro elemento da esquerda e de cima sendo 1, a sua direita
+            o 2, a direita do 2 o 3, abaixo do 1 o 4, e assim sucessivamente até o 9, e o foco do leitor de tela estará
+            no 5 no centro do teclado. </p>
+        <h3> Responda a questão abaixo: </h3>
+        <p> De acordo com o conteúdo acima, escolha uma das alternativas abaixo e a marque com (Enter) ou (Barra de
+            espaço): </p>
+        <p> Com o foco na tecla 5, se pressionarmos a tecla de seta para baixo qual será o número focado e verbalizado
+            pelo leitor de tela? </p>
+        <div id="blocoRespostas1">
+            <fieldset id="respostas1">
+                <legend> Selecione sua resposta </legend>
+                <input type="radio" id="botao6" name="opcoesteclado" value="botao6">
+                <label for="botao6">A) - Tecla 6 </label>
+                <br>
+                <input type="radio" id="botao4" name="opcoesteclado" value="botao4">
+                <label for="botao4">B) - Tecla 4 </label>
+                <br>
+                <input type="radio" id="botao8" name="botoesteclado" value="botao8">
+                <label for="botao8">C) - Tecla 8 </label>
+                <br>
+                <input type="radio" id="botao2" name="opcoesteclado" value="botao2">
+                <label for="botao2">D) - Tecla 2 </label>
+            </fieldset>
+            <p> Marque a opção escolhida, e pressione o botão abaixo para verificar sua resposta. </p>
+            <button id="tecladonumerico"> Exibir teclado Numérico </button>
+        </div>
+        <section id="blocoExplicacao1" class="exibe">
+            <h2> Orientação da navegação com Leitores de Tela </h2>
+            <div id="exemploteclado">
+                <fieldset id="exemploTecladoNumerico">
+                    <button id="tecla1" aria-label="tecla 1"> 1 </button>
+                    <button id="tecla2" aria-label="tecla 2"> 2 </button>
+                    <button id="tecla3" aria-label="tecla 3"> 3 </button>
+                    <br>
+                    <button id="tecla4" aria-label="tecla 4"> 4 </button>
+                    <button id="tecla5" aria-label="tecla 5"> 5 </button>
+                    <button id="tecla6" aria-label="tecla 6"> 6 </button>
+                    <br>
+                    <button id="tecla7" aria-label="tecla 7"> 7 </button>
+                    <button id="tecla8" aria-label="tecla 8"> 8 </button>
+                    <button id="tecla9" aria-label="tecla 9"> 9 </button>
+                </fieldset>
+            </div>
+            <p> Como ilustrado no exemplo acima, quando pressionamos a tecla de seta para baixo com um leitor de tela em
+                um navegador web, o foco se desloca para o próximo item imediatamente a direita do anterior, que em
+                nosso exemplo é a tecla 6. Caso o elemento focado fosse o último da direita como o 6 em nossa matriz, o
+                foco iria para o primeiro elemento da esquerda da linha imediatamente abaixo da atual, que em nosso
+                exemplo é o 7. A tecla de seta para cima faz exatamente o inverso, e em nosso exemplo a tecla de seta
+                para cima posicionaria o foco no 4 que é o item imediatamente a esquerda do elemento focado que em nosso
+                caso é o 5. </p>
+            <h2> Diferenças entre a navegação com as (Setas) e o (Tab) </h2>
+            <p> A navegação por meio da tecla tab funciona da mesma forma respeitando a sequência da esquerda para a
+                direita e de cima para baixo, porém, não são todos os elementos da tela que são focados com a tecla tab,
+                ou seja, não são todos os elementos que são tabuláveis. </p>
+            <p> Suponhamos que nós tenhamos no canto esquerdo um botão com o rótulo “Comprar liquidificador agora”, no
+                canto direito outro botão com o rótulo “Adicionar liquidificador ao carrinho”, logo abaixo dos botões
+                tenhamos um título de nível 3 com a frase “Liquidificador tritura tudo!”, abaixo do título de nível 3
+                esteja um pequeno texto com as características do liquidificador, abaixo do texto uma caixa combinada
+                com as cores disponíveis, e o foco esteja no botão “Comprar liquidificador agora”. </p>
+            <h3> Responda as questões abaixo: </h3>
+            <p> Tomando como base o exemplo descrito acima, marque a alternativa correta para cada questão. </p>
+            <p> Qual será a sequência verbalizada pelo leitor de tela se formos pressionando a tecla de seta para baixo
+                a partir do botão “Comprar liquidificador agora”? </p>
+            <div id="respostaAgrupada">
+                <fieldset id="respostas2">
+                    <legend> Selecione sua resposta </legend>
+                    <input type="radio" id="sequencia1" name="conjuntodesequencias" value="sequencia1">
+                    <label for="sequencia1"> A) - “Comprar liquidificador agora botão”, “Adicionar liquidificador ao
+                        carrinho botão”, e “Caixa combinada recolhido escolha a cor do liquidificador”. </label>
+                    <br>
+                    <input type="radio" id="sequencia2" name="conjuntodesequencias" value="sequencia2">
+                    <label for="sequencia2"> B) - “Comprar liquidificador agora botão”, “Adicionar liquidificador ao
+                        carrinho botão”, “Liquidificador tritura tudo! Título de nível 3”, “texto com as características
+                        do liquidificador”, e “Caixa combinada recolhido escolha a cor do liquidificador”. </label>
+                    <br>
+                    <input type="radio" id="sequencia3" name="conjuntodesequencias" value="sequencia3">
+                    <label for="sequencia3">C) - “Comprar liquidificador agora botão”, “Adicionar liquidificador ao
+                        carrinho botão”, “texto com as características do liquidificador”, e “Caixa combinada recolhido
+                        escolha a cor do liquidificador”. </label>
+                    <br>
+                    <input type="radio" id="sequencia4" name="conjuntodesequencias" value="sequencia4">
+                    <label for="sequencia4"> D) - “Comprar liquidificador agora botão”, “Adicionar liquidificador ao
+                        carrinho botão”, “Liquidificador tritura tudo! Título de nível 3”, e “Caixa combinada recolhido
+                        escolha a cor do liquidificador”.</label>
+                </fieldset>
+                <p> Qual será a sequência verbalizada se pressionarmos a tecla tab também partindo do botão “Comprar
+                    liquidificador agora”? </p>
+                <fieldset id="respostas3">
+                    <legend> Selecione sua resposta </legend>
+                    <input type="radio" id="opcao1" name="conjuntodeopcoes" value="opcao1">
+                    <label for="opcao1"> A) - “Comprar liquidificador agora botão”, “Adicionar liquidificador ao
+                        carrinho botão”, “texto com as características do liquidificador”, e “Caixa combinada recolhido
+                        escolha a cor do liquidificador”. </label>
+                    <br>
+                    <input type="radio" id="opcao2" name="conjuntodeopcoes" value="opcao2">
+                    <label for="opcao2"> B) - “Comprar liquidificador agora botão”, “Adicionar liquidificador ao
+                        carrinho botão”, “Liquidificador tritura tudo! Título de nível 3”, “texto com as características
+                        do liquidificador”, e “Caixa combinada recolhido escolha a cor do liquidificador”. </label>
+                    <br>
+                    <input type="radio" id="opcao3" name="conjuntodeopcoes" value="opcao3">
+                    <label for="opcao3">C) - “Comprar liquidificador agora botão”, “Adicionar liquidificador ao carrinho
+                        botão”, e “Caixa combinada recolhido escolha a cor do liquidificador”. </label>
+                    <br>
+                    <input type="radio" id="opcao4" name="conjuntodeopcoes" value="opcao4">
+                    <label for="opcao4"> D) - “Comprar liquidificador agora botão”, “Adicionar liquidificador ao
+                        carrinho botão”, “Liquidificador tritura tudo! Título de nível 3”, e “Caixa combinada recolhido
+                        escolha a cor do liquidificador”.</label>
+                </fieldset>
+                <p> Após ter selecionado as opções escolhidas, pressione o botão abaixo para visualizar o exemplo na
+                    prática, e verificar suas respostas. </p>
+                <button id="visualizarexemplo"> Visualizar exemplo </button>
+            </div>
+        </section>
+        <section id="blocoExplicacao2" class="exibe">
+            <h2> Navegação com (Setas) e (Tab) na prática </h2>
+            <div id="exemploliquidificador">
+                <button> Comprar liquidificador agora </button>
+                <button> Adicionar liquidificador ao carrinho </button>
+                <br>
+                <h3> Liquidificador Tritura Tudo! </h3>
+                <br>
+                <p> O Liquidificador Tritura Tudo é o que você precisa! 5.000W de potência, copo com capacidade para 2,5
+                    litros, várias cores e 8 velocidades, essa é a melhor opção em liquidificadores! </p>
+                <br>
+                <label for="corLiqui"> Escolha a cor do liquidificador </label>
+                <select id="corLiqui">
+                    <option> Azul </option>
+                    <option> Branco </option>
+                    <option> Prata </option>
+                    <option> Preto </option>
+                    <option> Vermelho </option>
+                </select>
+            </div>
+            <p> Como você pôde conferir na prática no exemplo acima, pressionando a tecla de (Seta para baixo) a
+                sequência verbalizada é: “Comprar liquidificador agora botão”, “Adicionar liquidificador ao carrinho
+                botão”, “Liquidificador tritura tudo! Título de nível 3”, “texto com as características do
+                liquidificador”, e “Caixa combinada recolhido escolha a cor do liquidificador”. Mas pressionando a tecla
+                (Tab), a sequência é um pouco diferente: “Comprar liquidificador agora botão”, “Adicionar liquidificador
+                ao carrinho botão”, e “Caixa combinada recolhido escolha a cor do liquidificador”. </p>
+            <p> Reparem que na navegação por (Tab), nem o título de nível 3 nem o texto com as características do
+                liquidificador foram focados. Isso ocorreu porque esses dois elementos não são tabuláveis, ou seja, não
+                podem ser focados na navegação através da tecla tab. Mas notem também que nos dois tipos de navegação, a
+                ordem da esquerda para direita e de cima para baixo foi respeitada. </p>
+            <h2> O que devemos testar em relação a ordem de navegação? </h2>
+            <p> Como QAs testando a acessibilidade, devemos verificar se o foco do leitor de telas está seguindo a ordem
+                correta que é da esquerda para a direita e de cima para baixo, e devemos constatar que o leitor está
+                passando por todos os elementos. Pode ocorrer por exemplo de por conta de uma solução estética ou
+                codificação errada, os elementos não estarem sendo verbalizados pelos leitores de tela na mesma
+                sequência em que estão dispostos na tela. Também não é raro pelos mesmos motivos, elementos deixarem de
+                ser focados pelos leitores, que nesses casos passam a “pular” a sequência correta. </p>
+            <h2> Muito bem, chegamos ao final do módulo 1! </h2>
+            <p> Agora que você já sabe basicamente como funciona um software leitor de tela e como o utilizar, vamos
+                para o próximo módulo. Pressione (Enter) ou (Barra de espaço) sobre o link abaixo para voltar a página
+                inicial, e vá para o módulo 2 também pressionando (Enter) ou (Barra de espaço) sobre ele. Bons estudos!
+            </p>
+            <a href="../index.html"> Concluir módulo 1 e retornar para a página inicial </a>
+            <p>&copy; todos os direitos reservados</p>
+        </section>
+        <script>
+            document.addEventListener("mousedown", (e) => {
+                e.preventDefault();
+                alert("Somente utilização do teclado é permitida no treinamento.");
+            });
+            const verificaRespostaAgrupada = () => {
+                const respostaAgrupada = document.getElementById("respostaAgrupada");
+                const btnRespostas = respostaAgrupada.querySelectorAll('input[type="radio"]');
+                btnRespostas.forEach((resposta) => {
+                    resposta.onchange = () => {
+                        let respostasMarcadas = respostaAgrupada.querySelectorAll('input[type="radio"]:checked');
+                        if (respostasMarcadas.length > 1) {
+                            let botao = respostaAgrupada.querySelector("button");
+                            botao.disabled = false;
+                            botao.onclick = () => {
+                                const blocoExplicacao2 = document.getElementById("blocoExplicacao2");
+                                blocoExplicacao2.classList.remove("oculta");
+                                blocoExplicacao2.classList.add("exibe");
+                            }
+                        }
+                    }
+                });
+            }
+            verificaRespostaAgrupada();
+            const fieldset = document.getElementById("respostas1");
+            const btnTeclado = fieldset.parentElement.querySelector("button");
+            btnTeclado.onclick = () => {
+                const opcaoMarcada = fieldset.querySelector('input[type="radio"]:checked');
+                if (!opcaoMarcada) {
+                    alert("Marque uma opção para proceguir!");
+                    return;
+                }
+                const blocoExplicacao1 = document.getElementById("blocoExplicacao1");
+                blocoExplicacao1.classList.remove("oculta");
+                blocoExplicacao1.classList.add("exibe");
+                const focoBtnTecla5 = document.getElementById("tecla5");
+                setTimeout(() => {
+                    focoBtnTecla5.focus();
+                }, 1000);
+            }
+
+        </script>
+</body>
+
+</html>
