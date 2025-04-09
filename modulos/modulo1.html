@@ -83,7 +83,7 @@
             <p> Marque a opção escolhida, e pressione o botão abaixo para verificar sua resposta. </p>
             <button id="tecladonumerico"> Exibir teclado Numérico </button>
         </div>
-        <section id="blocoExplicacao1" class="exibe">
+        <section id="blocoExplicacao1" class="oculta">
             <h2> Orientação da navegação com Leitores de Tela </h2>
             <div id="exemploteclado">
                 <fieldset id="exemploTecladoNumerico">
@@ -216,9 +216,21 @@
             <p>&copy; todos os direitos reservados</p>
         </section>
         <script>
-            document.addEventListener("mousedown", (e) => {
-                e.preventDefault();
+            document.addEventListener("click", (e) => {
                 alert("Somente utilização do teclado é permitida no treinamento.");
+                console.log(e);
+
+                e.preventDefault();
+
+            });
+            document.addEventListener("keyup", (e) => {
+                if (e.keycode == 13) {
+                    console.log(e);
+                    e.target.click();
+                }
+
+
+
             });
             const verificaRespostaAgrupada = () => {
                 const respostaAgrupada = document.getElementById("respostaAgrupada");
